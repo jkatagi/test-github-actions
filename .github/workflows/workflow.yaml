@@ -2,8 +2,6 @@ name: Workflow
 on:
   pull_request:
     types: [opened, synchronize, reopened]
-    branches-ignore:
-      - main
 jobs:
   workflow:
     runs-on: ubuntu-latest
