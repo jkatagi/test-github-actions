@@ -1,0 +1,17 @@
+name: Workflow
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches-ignore:
+      - main
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: dir1
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run a script
+        run: |
+          echo "Hello, world!"
